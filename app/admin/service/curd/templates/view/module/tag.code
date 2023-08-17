@@ -1,0 +1,7 @@
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">{{comment}}</label>
+            <div class="layui-input-block">
+                <div data-toggle="tag-input" data-name="{{field}}" data-value="{{value}}" data-required="{{required_text}}"></div>
+            </div>
+        </div>

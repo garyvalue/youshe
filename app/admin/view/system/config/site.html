@@ -1,0 +1,164 @@
+<form id="app-form" class="layui-form layuimini-form">
+    <input type="hidden" name="group_name" value="site">
+    <div class="layui-form-item">
+        <label class="layui-form-label">站点名称</label>
+        <div class="layui-input-block">
+            <input type="text" name="site_name" class="layui-input" lay-verify="required" placeholder="请输入站点名称" value="{:sysconfig('site','site_name')}">
+            <tip>填写站点名称。</tip>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">网站描述</label>
+        <div class="layui-input-block">
+            <input type="text" name="site_description" class="layui-input" lay-verify="required" placeholder="请输入站点描述" value="{:sysconfig('site','site_description')}">
+            <tip>写你的网站描述。</tip>
+        </div>
+    </div>
+
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">SEO关键词</label>
+        <div class="layui-input-block">
+            <input type="text" name="site_keywords" class="layui-input" lay-verify="required" placeholder="请输入站点关键词" value="{:sysconfig('site','site_keywords')}">
+            <tip>写你的网站关键词。</tip>
+        </div>
+    </div>
+
+
+
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">浏览器图标</label>
+        <div class="layui-input-block layuimini-upload">
+            <input name="site_ico" class="layui-input layui-col-xs6" lay-verify="required" placeholder="请上传浏览器图标,ico类型" value="{:sysconfig('site','site_ico')}">
+            <div class="layuimini-upload-btn">
+                <span><a class="layui-btn" data-upload="site_ico" data-upload-number="one" data-upload-exts="ico"><i class="fa fa-upload"></i> 上传</a></span>
+                <span><a class="layui-btn layui-btn-normal" id="select_site_ico" data-upload-select="site_ico" data-upload-number="one"><i class="fa fa-list"></i> 选择</a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">版本信息</label>
+        <div class="layui-input-block">
+            <input type="text" name="site_version" class="layui-input" lay-verify="required" placeholder="请输入版本信息" value="{:sysconfig('site','site_version')}">
+            <tip>填写版本信息。</tip>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">备案信息</label>
+        <div class="layui-input-block">
+            <input type="text" name="site_beian" class="layui-input" lay-verify="required" placeholder="请输入备案信息" value="{:sysconfig('site','site_beian')}">
+            <tip>填写备案信息。</tip>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">版权信息</label>
+        <div class="layui-input-block">
+            <input type="text" name="site_copyright" class="layui-input" lay-verify="required" placeholder="请输入版权信息" value="{:sysconfig('site','site_copyright')}">
+            <tip>填写版权信息。</tip>
+        </div>
+    </div>
+
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">导航颜色</label>
+        <div class="layui-input-block">
+            <input type="text" name="site_yanse" class="layui-input" lay-verify="required" placeholder="请输导航颜色代码" value="{:sysconfig('site','site_yanse')}">
+            <tip>填写导航颜色代码</tip>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">侧边导航颜色</label>
+        <div class="layui-input-block">
+            <input type="text" name="site_yanse2" class="layui-input" lay-verify="required" placeholder="请输导航颜色代码" value="{:sysconfig('site','site_yanse2')}">
+            <tip>填写导航颜色代码</tip>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">底部的头部=Command + D的背景图</label>
+        <div class="layui-input-block">
+            <input type="text" name="site_foot-top" class="layui-input" lay-verify="required" placeholder="颜色代码" value="{:sysconfig('site','site_foot-top')}">
+            <tip>颜色代码</tip>
+        </div>
+    </div>
+
+
+ <div class="layui-form-item">
+        <label class="layui-form-label">最底部</label>
+        <div class="layui-input-block">
+            <input type="text" name="site_footyanse" class="layui-input" lay-verify="required" placeholder="颜色代码" value="{:sysconfig('site','site_footyanse')}">
+            <tip>颜色代码</tip>
+        </div>
+    </div>
+
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">底部字体颜色</label>
+        <div class="layui-input-block">
+            <input type="text" name="site_foot-zi" class="layui-input" lay-verify="required" placeholder="颜色代码" value="{:sysconfig('site','site_foot-zi')}">
+            <tip>颜色代码</tip>
+        </div>
+    </div>
+
+
+
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">站点域名</label>
+        <div class="layui-input-block">
+            <input type="text" name="site_domain" class="layui-input" lay-verify="required" placeholder="请输入站点名称" value="{:sysconfig('site','site_domain')}">
+            <tip>填写站点域名。以http://或https://开头,内置的定时任务用到了这个配置项，修改之后需要重启定时任务</tip>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">微博url</label>
+        <div class="layui-input-block">
+            <input type="text" name="site_weibourl" class="layui-input" lay-verify="required" placeholder="请输入微博url" value="{:sysconfig('site','site_weibourl')}">
+            <tip> </tip>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">小红书url</label>
+        <div class="layui-input-block">
+            <input type="text" name="site_xiaohongshuurl" class="layui-input" lay-verify="required" placeholder="请输入小红书url" value="{:sysconfig('site','site_xiaohongshuurl')}">
+            <tip> </tip>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">商务联系url</label>
+        <div class="layui-input-block">
+            <input type="text" name="site_shangwuurl" class="layui-input" lay-verify="required" placeholder="请输入小红书url" value="{:sysconfig('site','site_shangwuurl')}">
+            <tip> </tip>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">默认密码</label>
+        <div class="layui-input-block">
+            <input type="text" name="site_default_password" class="layui-input" placeholder="请输入默认密码" value="{:sysconfig('site','site_default_password')}">
+            <tip>添加账号时自动填充的密码，默认为：123456 。建议填写为您系统特有的默认密码规则，比如：ul-aa@@123</tip>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">js脚本</label>
+        <div class="layui-input-block">
+            <textarea name="site_js_insert" class="layui-textarea">{:sysconfig('site','site_js_insert')}</textarea>
+            <tip>统计代码等脚本</tip>
+        </div>
+    </div>
+    <div class="hr-line"></div>
+    <div class="layui-form-item text-center">
+        <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="system.config/save" data-refresh="false">确认</button>
+        <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+    </div>
+
+</form>

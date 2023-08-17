@@ -1,0 +1,25 @@
+<div class="layuimini-container">
+    <div class="layuimini-main">
+        <table id="currentTable" class="layui-table layui-hide" data-auth-add="{:auth('debug.log/add')}" data-auth-edit="{:auth('debug.log/edit')}" data-auth-delete="{:auth('debug.log/delete')}" lay-filter="currentTable">
+        </table>
+    </div>
+</div>
+<style>
+    [data-field="content"] .layui-table-cell {
+        white-space: normal !important;
+        height: auto !important;
+        color: #333;
+    }
+
+    .log-group-0 {
+        background-color: #e6e6e6;
+    }
+
+    .log-group-1 {
+        background-color: #f9f9f9;
+    }
+
+    .layui-table-view .layui-table td {
+        padding: 0
+    }
+</style>

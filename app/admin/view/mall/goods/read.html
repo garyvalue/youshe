@@ -1,0 +1,130 @@
+<link rel="stylesheet" href="//layui.ulthon.com/cdn/layui-ul.css">
+<div class="layuimini-container">
+
+    <div class="layui-row">
+        <div class="layui-col-md8 layui-col-md-offset2 layui-col-lg6 layui-col-lg-offset3">
+            <div class="ul-descriptions border">
+                <div class="item">
+                    <div class="label">
+                        分类
+                    </div>
+                    <div class="value">
+                        {$row->cate->title}
+                    </div>
+                </div>
+                <div class="item short-line">
+                    <div class="label">
+                        标题
+                    </div>
+                    <div class="value">
+                        {$row->title}
+                    </div>
+                </div>
+                <div class="item poster">
+                    <div class="label">
+                        封面
+                    </div>
+                    <div class="value">
+                        <img class="poster-item" src="{$row.logo}" alt="">
+                    </div>
+                </div>
+
+
+                <!--
+                <div class="item">
+                    <div class="label">
+                        市场价格
+                    </div>
+                    <div class="value">
+                        {$row->market_price}
+                    </div>
+                </div>
+                <div class="item ">
+                    <div class="label">
+                        折扣价格
+                    </div>
+                    <div class="value">
+                        {$row->discount_price}
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="label">
+                        虚拟销量
+                    </div>
+                    <div class="value">
+                        {$row->virtual_sales}
+                    </div>
+                </div>
+
+-->
+
+
+
+
+                <div class="item">
+                    <div class="label">
+                        添加时间
+                    </div>
+                    <div class="value">
+                        {$row->create_time}
+                    </div>
+                </div>
+
+
+                <!--      
+               
+                <div class="item">
+                    <div class="label">
+                        库存统计
+                    </div>
+                    <div class="value">
+                        {$row->total_stock}
+                    </div>
+                </div>
+                <div class="item short-line">
+                    <div class="label">
+                        剩余库存
+                    </div>
+                    <div class="value">
+                        {$row->stock}
+                    </div>
+                </div>
+
+-->
+
+
+                <div class="item tag line">
+                    <div class="label">
+                        标签
+                    </div>
+                    <div class="value">
+                        {volist name='$row->tag_list_title' id='vo'}
+                        <div class="tag-item">{$vo}</div>
+                        {/volist}
+                    </div>
+                </div>
+                <div class="item line">
+                    <div class="label">
+                        url
+                    </div>
+                    <div class="value">
+                        {$row.remark}
+                    </div>
+                </div>
+
+                <div class="item article">
+                    <div class="label">
+                        详情
+                    </div>
+                    <div class="value">
+                        <div class="article-item">
+                            {$row.describe|raw|ua_htmlspecialchars_decode}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

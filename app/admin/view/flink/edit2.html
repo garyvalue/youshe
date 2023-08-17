@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>友情链接</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="__PUBLICS__/favicon.ico" />
+    <link rel="stylesheet" href="__STATIC__/vendors/layui/css/layui.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/font.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script src="/static/admin/assets/js/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/static/js/index.js"></script>
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <form class="layui-form layui-form-pane" action="{:url('/admin/flink/update')}" method="post">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">
+                                <span class='x-red'>*</span>名称
+                            </label>
+                            <div class="layui-input-block">
+                                <input type="hidden" class="input-texe" value="{$flinkData.id}" placeholder="" id="id" name="id">
+                                <input type="text" name="name" autocomplete="off" value="{$flinkData.name}" placeholder="" class="layui-input" lay-verify="required">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">
+                                <span class='x-red'>*</span>URL
+                            </label>
+                            <div class="layui-input-block">
+                                <input type="text" name="url" autocomplete="off" placeholder="输入url" value="{$flinkData.url}" class="layui-input" lay-verify="url">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <button class="layui-btn" lay-submit="" lay-filter="*">保存</button>
+                        </div>
+                    </form>
+                </div>
+                <div style="height:100px;"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>

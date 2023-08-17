@@ -1,0 +1,17 @@
+.table-data-container .layui-input {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.table-data-container .layui-input .placeholder {
+  color: #808080;
+}
+.table-data-container .layui-input .layui-btn {
+  pointer-events: none;
+}
+.table-data-container .layui-input .layui-btn i {
+  pointer-events: all;
+}
+.table-data-container .layui-form-danger + .layui-input {
+  border-color: #ff5722 !important;
+}

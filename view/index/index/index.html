@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]> <html class="no-js oldie" lang="zh-CN"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="zh-CN"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="zh-CN" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{:sysconfig('site','site_name')}</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta content="{:sysconfig('site','site_description')}" name="description" />
+    <meta content="{:sysconfig('site','site_keywords')}" name="Keywords" />
+    <link rel="shortcut icon" href="{:sysconfig('site','site_ico')}" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/static/index/css/fontello.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/static/index/css/styles.css" />
+
+</head>
+
+<style>
+        .header {
+        height: 64px;
+        z-index: 10;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        background: {:sysconfig('site', 'site_yanse')};
+        -webkit-backdrop-filter: saturate(180%) blur(4px);
+        backdrop-filter: saturate(180%) blur(4px);
+        }
+        .part-sidebar .sidebar-menu .menu-a.active {
+    background-color: {:sysconfig('site', 'site_yanse2')};
+    color: #fff;
+}
+.part-footer-top {
+    background-color: {:sysconfig('site', 'site_foot-top')};
+    font-size: 14px;
+    color: {:sysconfig('site', 'site_foot-zi')};
+   /* display: none;*/
+    position: relative;
+    z-index: 10;
+}
+
+    .part-footer-copyright {
+    text-align: center;
+    font-size: 12px;
+    color: {:sysconfig('site', 'site_foot-zi')};
+    background: {:sysconfig('site', 'site_footyanse')};
+    line-height: 2.08333333em;
+    padding: 22px 24px;
+    position: relative;
+    z-index: 10;
+}
+
+</style>
+
+
+<body class="body-ai page-ai has-header-fixed">
+    <div id="app">
+        <header class="header">
+            <div class="container">
+                <h2 class="logo wrap-left ">
+                    <a href="/" target="_blank" class="logo-a">
+                        <i class="logo-img">
+
+                            <img src="{:sysconfig('site','logo_image')}" height="30">
+
+            </i>
+                    </a>
+                </h2>
+                <div class="header-main flex">
+                    <div class="h-item h-title">
+                        <div class="part-header-bar-title ">
+                            <h1 class="page-title">
+                                <div class="p-ico">
+                                    <div is="logo-img"></div>
+                                </div>
+                                <strong class="title">图酷导航</strong>
+                            </h1>
+                            <div class="part-navigations">
+                                <div class="titles-wrap">
+                                    <h2 class="pt">图酷旗下网址导航</h2>
+                                    <div class="titles flex f-3">
+
+                                        <?php foreach ($mallt_cateData as $mallt_cate): ?>
+
+
+
+
+
+
+                                        <div class="f-item"><a href="<?php echo $mallt_cate['url']; ?>" class="f-box ptitle"><i class="ico"><i class="<?php echo $mallt_cate['remark']; ?>"></i></i><strong><?php echo $mallt_cate['title']; ?></strong></a></div>
+
+                                        <?php endforeach; ?>
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-item h-menus">
+                        <div class="part-header-bar-menu ">
+
+
+
+
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="h-subs h-item">
+                        <div class="part-header-bar-recommend ">
+                            <div class="b-wrap flex"><a href="https://www.tukuv.com/shop/6134.html" target="_blank"><i class="item-thumb"><i class="thumb thumb-round" style="background-image:url(/static/index/images/dh-pic-3.png);"></i></i> <i class="txt">设计LOGO</i></a>
+                                <a href="https://www.tukuv.com/logo" target="_blank"><i class="item-thumb"><i class="thumb thumb-round" style="background-image:url(/static/index/images/dh-pic-6.png);"></i></i> <i class="txt">LOGO案例</i></a>
+                                <a href="https://www.tukuv.com/" target="_blank"><i class="item-thumb"><i class="thumb thumb-round" style="background-image:url(/static/index/images/nav-dkt-new2018.jpg);"></i></i> <i class="txt">图酷设计</i></a>
+
+<a href="/message" target="_blank"><i class="item-thumb"><i class="thumb thumb-round" style="background-image:url(https://hao.tukuv.com/open/images/lianjie.png);"></i></i> <i class="txt">提交链接</i></a>
+
+                            </div>
+                        </div>
+                        <div is="header-login"></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        </header>
+        <div class="part-main">
+            <div class="container">
+                <div class="main">
+                    <div class="main-wrap">
+                        <div class="part-search">
+                            <div class="bg-l"></div>
+                            <div class="search-main">
+                                <h2 class="search-title">设计师必备的图酷导航</h2>
+
+
+
+
+
+
+                                <div class="search-form">
+                                    <div class="s-titles"><i class="item item-txt">常用</i> <i class="item current"><i class="item-a">
+                                    百度
+<!--                                </i></i>
+                                    <div class="s-titles"><i class="item item-txt">常用</i> <i class="item current"><i class="item-a">
+                                    百度一下-->
+                                </i></i>
+                                <i class="item">
+                                    <i class="item item-a">Google</i>
+                                </i>
+                                <i class="item">
+                                    <i class="item item-a">图酷搜索</i>
+                                </i>
+                                <i class="item">
+                                    <i class="item item-a">LOGO设计</i>
+                                </i>
+                              
+                                    </div>
+                                    <div class="s-form">
+                                        <form action="https://www.baidu.com/s" method="get" target="_blank"><input type="text" autocomplete="off" name="wd" class="s placeholder" placeholder="图酷网 专注原创LOGO设计"> <button type="submit" class="s-btn">百度一下</button></form>
+                                        
+                                     
+                                    </div>
+                                    
+                                </div> 
+
+<!--                               
+                                <div class="search-form">
+                                    <div class="part-search-form ">
+                                        <div is="search-form" keyword="请输入你的域名，如tukuv.com"></div>
+                                    </div>
+                                </div> -->
+                            
+
+
+
+
+                                <div class="search-keywords">
+                                    <div class="part-search-keywords">
+                                        <div is="uisdc-hotsearch"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                            <div class="bg-r"></div>
+                            <div is="uisdc-news-mobile"></div>
+                        </div>
+                        <div class="part-cats-loop">
+                            <div class="part-uisdc-ai">
+                                <div is="uisdc-ai"></div>
+                            </div>
+                            <div class="part-cat-block part-cat-block-ai">
+                                <h2 class="c-title" id="hot">
+                                    <div class="l"><strong>热门推荐</strong></div>
+                                    <div class="r"></div>
+                                </h2>
+                                <div class="c-content ">
+                                    <div class="c-loop c-loop-ai flex">
+
+
+                                        <?php foreach ($categoryList as $category): ?>
+                                        <?php if ($category['id'] == 2): ?>
+                                        <?php foreach ($goodsList as $goods): ?>
+                                        <?php if ($goods['cate_id'] == 2): ?>
+                                        <div class="part-item-website f-item p-item">
+                                            <a class="f-box" href="<?php echo $goods['remark']; ?>" target="_blank">
+                                                <h3 class="item-title">
+                                                    <i class="item-ico">
+            <i class="thumb thumb-img">
+                <img src="<?php echo $goods['logo']; ?>" alt="Midjourney ">
+            </i>
+                                                    </i>
+                                                    <strong class="title"> <?php echo $goods['title']; ?></strong>
+                                                </h3>
+                                                <div class="item-desc">
+                                                    <?php echo $goods['describe']; ?>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+
+
+
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="part-cat-block part-cat-block-ai">
+                                <h2 class="c-title" id="smart2">
+                                    <div class="l"><strong>高清图库</strong></div>
+                                    <div class="r"></div>
+                                </h2>
+                                <div class="c-content ">
+                                    <div class="c-loop c-loop-ai flex">
+
+
+
+
+                                        <?php foreach ($categoryList as $category): ?>
+                                        <?php if ($category['id'] == 3): ?>
+                                        <?php foreach ($goodsList as $goods): ?>
+                                        <?php if ($goods['cate_id'] == 3): ?>
+                                        <div class="part-item-website f-item p-item">
+                                            <a class="f-box" href="<?php echo $goods['remark']; ?>" target="_blank">
+                                                <h3 class="item-title">
+                                                    <i class="item-ico">
+            <i class="thumb thumb-img">
+                <img src="<?php echo $goods['logo']; ?>" alt="Midjourney ">
+            </i>
+                                                    </i>
+                                                    <strong class="title"> <?php echo $goods['title']; ?></strong>
+                                                </h3>
+                                                <div class="item-desc">
+                                                    <?php echo $goods['describe']; ?>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part-cat-block part-cat-block-ai">
+                                <h2 class="c-title" id="smart">
+                                    <div class="l"><strong>WP主题</strong></div>
+                                    <div class="r"></div>
+                                </h2>
+                                <div class="c-content ">
+                                    <div class="c-loop c-loop-ai flex">
+
+
+
+
+
+                                        <?php foreach ($categoryList as $category): ?>
+                                        <?php if ($category['id'] == 4): ?>
+                                        <?php foreach ($goodsList as $goods): ?>
+                                        <?php if ($goods['cate_id'] == 4): ?>
+                                        <div class="part-item-website f-item p-item">
+                                            <a class="f-box" href="<?php echo $goods['remark']; ?>" target="_blank">
+                                                <h3 class="item-title">
+                                                    <i class="item-ico">
+            <i class="thumb thumb-img">
+                <img src="<?php echo $goods['logo']; ?>" alt="Midjourney ">
+            </i>
+                                                    </i>
+                                                    <strong class="title"> <?php echo $goods['title']; ?></strong>
+                                                </h3>
+                                                <div class="item-desc">
+                                                    <?php echo $goods['describe']; ?>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part-cat-block part-cat-block-ai">
+                                <h2 class="c-title" id="smart4">
+                                    <div class="l"><strong>灵感创意</strong></div>
+                                    <div class="r"></div>
+                                </h2>
+                                <div class="c-content ">
+                                    <div class="c-loop c-loop-ai flex">
+
+
+
+
+                                        <?php foreach ($categoryList as $category): ?>
+                                        <?php if ($category['id'] == 5): ?>
+                                        <?php foreach ($goodsList as $goods): ?>
+                                        <?php if ($goods['cate_id'] == 5): ?>
+                                        <div class="part-item-website f-item p-item">
+                                            <a class="f-box" href="<?php echo $goods['remark']; ?>" target="_blank">
+                                                <h3 class="item-title">
+                                                    <i class="item-ico">
+            <i class="thumb thumb-img">
+                <img src="<?php echo $goods['logo']; ?>" alt="Midjourney ">
+            </i>
+                                                    </i>
+                                                    <strong class="title"> <?php echo $goods['title']; ?></strong>
+                                                </h3>
+                                                <div class="item-desc">
+                                                    <?php echo $goods['describe']; ?>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part-cat-block part-cat-block-ai">
+                                <h2 class="c-title" id="smart9">
+                                    <div class="l"><strong>素材资源</strong></div>
+                                    <div class="r"></div>
+                                </h2>
+                                <div class="c-content ">
+                                    <div class="c-loop c-loop-ai flex">
+
+
+
+                                        <?php foreach ($categoryList as $category): ?>
+                                        <?php if ($category['id'] == 6): ?>
+                                        <?php foreach ($goodsList as $goods): ?>
+                                        <?php if ($goods['cate_id'] == 6): ?>
+                                        <div class="part-item-website f-item p-item">
+                                            <a class="f-box" href="<?php echo $goods['remark']; ?>" target="_blank">
+                                                <h3 class="item-title">
+                                                    <i class="item-ico">
+            <i class="thumb thumb-img">
+                <img src="<?php echo $goods['logo']; ?>" alt="Midjourney ">
+            </i>
+                                                    </i>
+                                                    <strong class="title"> <?php echo $goods['title']; ?></strong>
+                                                </h3>
+                                                <div class="item-desc">
+                                                    <?php echo $goods['describe']; ?>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part-cat-block part-cat-block-ai">
+                                <h2 class="c-title" id="smart7">
+                                    <div class="l"><strong>字体下载</strong></div>
+                                    <div class="r"></div>
+                                </h2>
+                                <div class="c-content ">
+                                    <div class="c-loop c-loop-ai flex">
+
+
+
+                                        <?php foreach ($categoryList as $category): ?>
+                                        <?php if ($category['id'] == 7): ?>
+                                        <?php foreach ($goodsList as $goods): ?>
+                                        <?php if ($goods['cate_id'] == 7): ?>
+                                        <div class="part-item-website f-item p-item">
+                                            <a class="f-box" href="<?php echo $goods['remark']; ?>" target="_blank">
+                                                <h3 class="item-title">
+                                                    <i class="item-ico">
+            <i class="thumb thumb-img">
+                <img src="<?php echo $goods['logo']; ?>" alt="Midjourney ">
+            </i>
+                                                    </i>
+                                                    <strong class="title"> <?php echo $goods['title']; ?></strong>
+                                                </h3>
+                                                <div class="item-desc">
+                                                    <?php echo $goods['describe']; ?>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="part-cat-block part-cat-block-ai">
+                                <h2 class="c-title" id="smart5">
+                                    <div class="l"><strong>设计工具</strong></div>
+                                    <div class="r"></div>
+                                </h2>
+                                <div class="c-content ">
+                                    <div class="c-loop c-loop-ai flex">
+
+                                        <?php foreach ($categoryList as $category): ?>
+                                        <?php if ($category['id'] == 8): ?>
+                                        <?php foreach ($goodsList as $goods): ?>
+                                        <?php if ($goods['cate_id'] == 8): ?>
+                                        <div class="part-item-website f-item p-item">
+                                            <a class="f-box" href="<?php echo $goods['remark']; ?>" target="_blank">
+                                                <h3 class="item-title">
+                                                    <i class="item-ico">
+            <i class="thumb thumb-img">
+                <img src="<?php echo $goods['logo']; ?>" alt="Midjourney ">
+            </i>
+                                                    </i>
+                                                    <strong class="title"> <?php echo $goods['title']; ?></strong>
+                                                </h3>
+                                                <div class="item-desc">
+                                                    <?php echo $goods['describe']; ?>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part-cat-block part-cat-block-ai">
+                                <h2 class="c-title" id="smart8">
+                                    <div class="l"><strong>摄影美图</strong></div>
+                                    <div class="r"></div>
+                                </h2>
+                                <div class="c-content ">
+                                    <div class="c-loop c-loop-ai flex">
+
+
+
+
+
+                                        <?php foreach ($categoryList as $category): ?>
+                                        <?php if ($category['id'] == 9): ?>
+                                        <?php foreach ($goodsList as $goods): ?>
+                                        <?php if ($goods['cate_id'] == 9): ?>
+                                        <div class="part-item-website f-item p-item">
+                                            <a class="f-box" href="<?php echo $goods['remark']; ?>" target="_blank">
+                                                <h3 class="item-title">
+                                                    <i class="item-ico">
+            <i class="thumb thumb-img">
+                <img src="<?php echo $goods['logo']; ?>" alt="Midjourney ">
+            </i>
+                                                    </i>
+                                                    <strong class="title"> <?php echo $goods['title']; ?></strong>
+                                                </h3>
+                                                <div class="item-desc">
+                                                    <?php echo $goods['describe']; ?>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part-cat-block part-cat-block-ai">
+                                <h2 class="c-title" id="smart6">
+                                    <div class="l"><strong>二次元</strong></div>
+                                    <div class="r"></div>
+                                </h2>
+                                <div class="c-content ">
+                                    <div class="c-loop c-loop-ai flex">
+
+
+
+                                        <?php foreach ($categoryList as $category): ?>
+                                        <?php if ($category['id'] == 10): ?>
+                                        <?php foreach ($goodsList as $goods): ?>
+                                        <?php if ($goods['cate_id'] == 10): ?>
+                                        <div class="part-item-website f-item p-item">
+                                            <a class="f-box" href="<?php echo $goods['remark']; ?>" target="_blank">
+                                                <h3 class="item-title">
+                                                    <i class="item-ico">
+            <i class="thumb thumb-img">
+                <img src="<?php echo $goods['logo']; ?>" alt="Midjourney ">
+            </i>
+                                                    </i>
+                                                    <strong class="title"> <?php echo $goods['title']; ?></strong>
+                                                </h3>
+                                                <div class="item-desc">
+                                                    <?php echo $goods['describe']; ?>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part-cat-block part-cat-block-ai">
+                                <h2 class="c-title" id="smart10">
+                                    <div class="l"><strong>配色方案</strong></div>
+                                    <div class="r"></div>
+                                </h2>
+                                <div class="c-content ">
+                                    <div class="c-loop c-loop-ai flex">
+
+
+
+                                        <?php foreach ($categoryList as $category): ?>
+                                        <?php if ($category['id'] == 11): ?>
+                                        <?php foreach ($goodsList as $goods): ?>
+                                        <?php if ($goods['cate_id'] == 11): ?>
+                                        <div class="part-item-website f-item p-item">
+                                            <a class="f-box" href="<?php echo $goods['remark']; ?>" target="_blank">
+                                                <h3 class="item-title">
+                                                    <i class="item-ico">
+            <i class="thumb thumb-img">
+                <img src="<?php echo $goods['logo']; ?>" alt="Midjourney ">
+            </i>
+                                                    </i>
+                                                    <strong class="title"> <?php echo $goods['title']; ?></strong>
+                                                </h3>
+                                                <div class="item-desc">
+                                                    <?php echo $goods['describe']; ?>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part-cat-block part-cat-block-ai">
+                                <h2 class="c-title" id="study">
+                                    <div class="l"><strong>酷站模板</strong></div>
+                                    <div class="r"></div>
+                                </h2>
+                                <div class="c-content ">
+                                    <div class="c-loop c-loop-ai flex">
+
+
+
+
+
+                                        <?php foreach ($categoryList as $category): ?>
+                                        <?php if ($category['id'] == 12): ?>
+                                        <?php foreach ($goodsList as $goods): ?>
+                                        <?php if ($goods['cate_id'] == 12): ?>
+                                        <div class="part-item-website f-item p-item">
+                                            <a class="f-box" href="<?php echo $goods['remark']; ?>" target="_blank">
+                                                <h3 class="item-title">
+                                                    <i class="item-ico">
+            <i class="thumb thumb-img">
+                <img src="<?php echo $goods['logo']; ?>" alt="Midjourney ">
+            </i>
+                                                    </i>
+                                                    <strong class="title"> <?php echo $goods['title']; ?></strong>
+                                                </h3>
+                                                <div class="item-desc">
+                                                    <?php echo $goods['describe']; ?>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part-cat-block part-cat-block-ai">
+                                <h2 class="c-title" id="gadget">
+                                    <div class="l"><strong>短视频</strong></div>
+                                    <div class="r"></div>
+                                </h2>
+                                <div class="c-content ">
+                                    <div class="c-loop c-loop-ai flex">
+
+
+
+                                        <?php foreach ($categoryList as $category): ?>
+                                        <?php if ($category['id'] == 13): ?>
+                                        <?php foreach ($goodsList as $goods): ?>
+                                        <?php if ($goods['cate_id'] == 13): ?>
+                                        <div class="part-item-website f-item p-item">
+                                            <a class="f-box" href="<?php echo $goods['remark']; ?>" target="_blank">
+                                                <h3 class="item-title">
+                                                    <i class="item-ico">
+            <i class="thumb thumb-img">
+                <img src="<?php echo $goods['logo']; ?>" alt="Midjourney ">
+            </i>
+                                                    </i>
+                                                    <strong class="title"> <?php echo $goods['title']; ?></strong>
+                                                </h3>
+                                                <div class="item-desc">
+                                                    <?php echo $goods['describe']; ?>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part-cat-block part-cat-block-ai">
+                                <h2 class="c-title" id="program">
+                                    <div class="l"><strong>高效办公</strong></div>
+                                    <div class="r"></div>
+                                </h2>
+                                <div class="c-content ">
+                                    <div class="c-loop c-loop-ai flex">
+
+
+
+                                        <?php foreach ($categoryList as $category): ?>
+                                        <?php if ($category['id'] == 14): ?>
+                                        <?php foreach ($goodsList as $goods): ?>
+                                        <?php if ($goods['cate_id'] == 14): ?>
+                                        <div class="part-item-website f-item p-item">
+                                            <a class="f-box" href="<?php echo $goods['remark']; ?>" target="_blank">
+                                                <h3 class="item-title">
+                                                    <i class="item-ico">
+            <i class="thumb thumb-img">
+                <img src="<?php echo $goods['logo']; ?>" alt="Midjourney ">
+            </i>
+                                                    </i>
+                                                    <strong class="title"> <?php echo $goods['title']; ?></strong>
+                                                </h3>
+                                                <div class="item-desc">
+                                                    <?php echo $goods['describe']; ?>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part-cat-block part-cat-block-ai">
+                                <h2 class="c-title" id="institution">
+                                    <div class="l"><strong>前端开发</strong></div>
+                                    <div class="r"></div>
+                                </h2>
+                                <div class="c-content ">
+                                    <div class="c-loop c-loop-ai flex">
+
+
+                                        <?php foreach ($categoryList as $category): ?>
+                                        <?php if ($category['id'] == 15): ?>
+                                        <?php foreach ($goodsList as $goods): ?>
+                                        <?php if ($goods['cate_id'] == 15): ?>
+                                        <div class="part-item-website f-item p-item">
+                                            <a class="f-box" href="<?php echo $goods['remark']; ?>" target="_blank">
+                                                <h3 class="item-title">
+                                                    <i class="item-ico">
+            <i class="thumb thumb-img">
+                <img src="<?php echo $goods['logo']; ?>" alt="Midjourney ">
+            </i>
+                                                    </i>
+                                                    <strong class="title"> <?php echo $goods['title']; ?></strong>
+                                                </h3>
+                                                <div class="item-desc">
+                                                    <?php echo $goods['describe']; ?>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part-cat-block part-cat-block-ai">
+                                <h2 class="c-title" id="smart12">
+                                    <div class="l"><strong>尺寸适配</strong></div>
+                                    <div class="r"></div>
+                                </h2>
+                                <div class="c-content ">
+                                    <div class="c-loop c-loop-ai flex">
+
+
+
+                                        <?php foreach ($categoryList as $category): ?>
+                                        <?php if ($category['id'] == 16): ?>
+                                        <?php foreach ($goodsList as $goods): ?>
+                                        <?php if ($goods['cate_id'] == 16): ?>
+                                        <div class="part-item-website f-item p-item">
+                                            <a class="f-box" href="<?php echo $goods['remark']; ?>" target="_blank">
+                                                <h3 class="item-title">
+                                                    <i class="item-ico">
+            <i class="thumb thumb-img">
+                <img src="<?php echo $goods['logo']; ?>" alt="Midjourney ">
+            </i>
+                                                    </i>
+                                                    <strong class="title"> <?php echo $goods['title']; ?></strong>
+                                                </h3>
+                                                <div class="item-desc">
+                                                    <?php echo $goods['describe']; ?>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part-cat-block part-cat-block-ai">
+                                <h2 class="c-title" id="smart11">
+                                    <div class="l"><strong>图标/LOGO</strong></div>
+                                    <div class="r"></div>
+                                </h2>
+                                <div class="c-content ">
+                                    <div class="c-loop c-loop-ai flex">
+
+
+
+                                        <?php foreach ($categoryList as $category): ?>
+                                        <?php if ($category['id'] == 17): ?>
+                                        <?php foreach ($goodsList as $goods): ?>
+                                        <?php if ($goods['cate_id'] == 17): ?>
+                                        <div class="part-item-website f-item p-item">
+                                            <a class="f-box" href="<?php echo $goods['remark']; ?>" target="_blank">
+                                                <h3 class="item-title">
+                                                    <i class="item-ico">
+            <i class="thumb thumb-img">
+                <img src="<?php echo $goods['logo']; ?>" alt="Midjourney ">
+            </i>
+                                                    </i>
+                                                    <strong class="title"> <?php echo $goods['title']; ?></strong>
+                                                </h3>
+                                                <div class="item-desc">
+                                                    <?php echo $goods['describe']; ?>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-introduction">
+                            <div class="b-wrap flex">
+                                <div class="f-item intro-item b-intro">
+                                    <h2 class="b-title">{:sysconfig('site','site_name')}</h2>
+                                    <div class="b-content">
+                                        <p>{:sysconfig('site','site_description')}</p>
+                                        <div class="navs flex ">
+
+                                            <?php foreach ($mallt_cateData as $mallt_cate): ?>
+
+
+
+
+
+
+                                            <div class="f-item"><a href="<?php echo $mallt_cate['url']; ?>" class="f-box ptitle"><i class="ico"><i class="<?php echo $mallt_cate['remark']; ?>"></i></i><strong><?php echo $mallt_cate['title']; ?></strong></a></div>
+
+                                            <?php endforeach; ?>
+
+
+
+
+                                            <div class="f-item n-item">
+                                                <div class="f-box ptitle"><i class="ico"><i class="icon icon-nav-more"></i></i><strong>更多导航</strong></div>
+                                                <div class="n-submenu">
+                                                    <div class="ns-wrap flex">
+
+
+                                                        <?php foreach ($mall_cateData as $mall_cate): ?>
+
+                                                        <div class="f-item"><a href="<?php echo $mall_cate['url']; ?>" class="f-box ptitle"><i class="ico"><i class="<?php echo $mall_cate['remark']; ?>"></i></i><strong><?php echo $mall_cate['title']; ?></strong></a></div>
+
+                                                        <?php endforeach; ?>
+
+
+
+
+
+
+                                                    </div>
+
+
+
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f-item intro-item b-media">
+                                    <h2 class="b-title">图酷新媒体矩阵</h2>
+                                    <div class="b-content">
+                                        <div class="medias">
+                                            <div class="m-wrap flex f-2">
+                                                <div class="part-media-item-wechat f-item m-item">
+                                                    <div class="f-box m-box">
+                                                        <div class="m-c"><i class="ico"><i class="icon icon-wechat-1"></i></i><strong>微信公众号</strong><i class="desc">每天官微五分钟，一年萌新变大神</i></div>
+                                                    </div>
+                                                    <div class="ewm-content ewm-wechat">
+                                                        <div class="ewm-main">
+                                                            <div class="thumb-div fl"> <i class="thumb" style="background-image:url({:sysconfig('site','w_image')});"></i> </div>
+                                                            <h4>每天官微五分钟</h4>
+                                                            <h4>一年萌新变大神</h4>
+                                                            <h4> <span> <i class="icon-wechat-1"></i> 扫码关注 </span> </h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="part-media-item-sina f-item m-item">
+                                                    <div class="f-box m-box">
+                                                        <div class="m-c"><i class="ico"><i class="icon icon-sina-1"></i></i><strong>微博</strong><i class="desc">每日更新干货</i></div>
+                                                    </div>
+                                                    <div class="ewm-content ewm-weibo">
+                                                        <div class="ewm-main">
+                                                            <div class="items flex f-2">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="part-media-item-xiaohongshu f-item m-item">
+                                                    <a href="{:sysconfig('site','site_weibourl')}" target="_blank" class="f-box m-box">
+                                                        <div class="m-c"><i class="ico"><i class="icon icon-xiaohongshu"></i></i><strong>小红书</strong><i class="desc">专业设计图文短内容频道</i></div>
+                                                    </a>
+                                                </div>
+                                                <div class="part-media-item-qun f-item m-item">
+                                                    <div class="f-box m-box">
+                                                        <div class="m-c"><i class="ico"><i class="icon icon-qun"></i></i><strong>群聊天</strong><i class="desc">严格审核打造高质量交流群</i></div>
+                                                    </div>
+                                                    <div class="ewm-content ewm-qun">
+                                                        <div class="ewm-main clearfix">
+                                                            <div class="ewm-qun-1">
+                                                                <h2><i class="ico icon-wechat-2"></i> 官方微信群</h2>
+                                                                <div class="ewm-qun-ul">
+
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="ewm-qun-2">
+                                                                <div class="thumb-div"> <i class="thumb" style="background-image:url({:sysconfig('site','wx_image')});"></i> </div>
+                                                                <h3>微信扫码 添加管理员</h3>
+                                                                <h5>微信号： 招码添加</h5>
+                                                                <h5>严格审核打造高质量交流群</h5>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f-item intro-item b-amount">
+                                    <h2 class="b-title">已收录人气酷站</h2>
+                                    <div class="b-content ">
+                                        <div class="site-amount"><strong><?php echo $count; ?></strong><i>个</i></div>
+                                        <h4 class="site-update"><i class="showTime"></i></h4>
+                                        <div class="btns"><a href="{:sysconfig('site','site_shangwuurl')}" class="btn btn-blue" target="_blank" rel="noreferrer nofollow"><i class="icon-i-vip"></i> 商务合作</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <script>
+                            var t = null;
+                            t = setTimeout(time, 1000); //開始运行
+                            function time() {
+                                clearTimeout(t); //清除定时器
+                                dt = new Date();
+                                var y = dt.getFullYear();
+                                var mt = dt.getMonth() + 1;
+                                var day = dt.getDate();
+                                var h = dt.getHours(); //获取时
+                                var m = dt.getMinutes(); //获取分
+                                var s = dt.getSeconds(); //获取秒
+                                document.querySelector(".showTime").innerHTML =
+                                    "导航更新日期：" +
+                                    y +
+                                    "年" +
+                                    mt +
+                                    "月" +
+                                    day +
+                                    "-" +
+                                    h +
+                                    "时" +
+                                    m +
+                                    "分" +
+                                    s +
+                                    "秒";
+                                t = setTimeout(time, 1000); //设定定时器，循环运行
+                            }
+                        </script>
+
+
+
+
+
+
+
+
+                        <div class="part-show">
+                            <div is="top-show"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="part-sidebar">
+                    <div class="sidebar-navs">
+                        <h3 class="sn has-submenu">
+
+
+
+                            <i class="sn-btn"><i class="icon-home ico"></i> 全部网址导航 <i class="ico-more icon-right"></i></i>
+
+
+                            <div class="part-navigations">
+                                <div class="titles-wrap">
+                                    <h2 class="pt">旗下网址导航</h2>
+                                    <div class="titles flex f-3">
+
+
+                                        <?php foreach ($mall_cateData as $mall_cate): ?>
+
+                                        <div class="f-item"><a href="<?php echo $mall_cate['url']; ?>" class="f-box ptitle"><i class="ico"><i class="<?php echo $mall_cate['remark']; ?>"></i></i><strong><?php echo $mall_cate['title']; ?></strong></a></div>
+
+                                        <?php endforeach; ?>
+
+
+
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                    </div>
+                    <div class="sidebar-menu-wrap">
+                        <div class="sidebar-menu ">
+                            <ul class="menu">
+
+
+
+
+                                <?php foreach ($mall_cateData as $mall_cate): ?>
+                                <li class="menu-item"><a href="<?php echo $mall_cate['url']; ?>" class="menu-a"><i class="<?php echo $mall_cate['remark']; ?>"></i><?php echo $mall_cate['title']; ?></a></li>
+                                <?php endforeach; ?>
+
+
+
+
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="part-footer-top">
+            <div class="container">
+                <div class="main">
+                    <div class="main-wrap">
+                        <div class="pt">
+                            <div class="pt-l">
+                                按 <i class="i">Ctrl</i> + <i class="i">D</i> 一键收藏！ 入站必刷，百万设计师都在用的图酷网址导航
+                            </div>
+                            <div class="pt-r">
+                                {:sysconfig('site','logo_title')}等你来关注
+                                <i class="item item-wechat">
+                        <i class="i-ico icon-wechat-1"></i>
+                                <div class="code-div">
+                                    <div class="ewmDiv">
+                                        <div class="ewm-item ewm-wechat">
+                                            <div class="code-wrap">
+                                                <div class="code" style="background-image:url({:sysconfig('site','w_image')});"></div>
+                                            </div>
+                                            <div class="ewm-main">
+                                                <p>每天官微五分钟<br>一年萌新变大神</p>
+                                                <h5> <i class="icon-wechat"></i> 扫码关注 </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </i>
+                                <a href="{:sysconfig('site','site_weibourl')}" class="item item-sina" target="_blank"><i class="i-ico icon-sina-1"></i></a>
+                                <a href="{:sysconfig('site','site_xiaohongshuurl')}" class="item item-xiaohongshu" target="_blank"><i class="i-ico icon-xiaohongshu"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="part-footer-copyright">
+            <div class="statement">
+                <p><img src="/static/index/images/secure.svg" alt="secure" /> {:sysconfig('site','site_description')}<i class="hide_sm"></i><i class="sm_block"></i></p>
+
+ <p><img src="/static/index/images/secure.svg" alt="secure" /> 友情链接：  
+
+                   
+
+      <?php foreach ($flinkData as $flink): ?>
+
+                    <a target="_blank" href="<?php echo $flink['url']; ?>" title="<?php echo $flink['name']; ?>">
+                        <?php echo $flink['name']; ?>                 </a>
+              
+
+ <?php endforeach; ?>
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+                     <i class="hide_sm"></i><i class="sm_block"></i></p>
+
+            </div>
+            <div class="links">
+                <a href="{:sysconfig('site','site_shangwuurl')}" target="_blank">广告合作</a><a href="{:sysconfig('site','site_shangwuurl')}" target="_blank">联系我们</a><a href="{:sysconfig('site','site_weibourl')}" target="_blank">微博</a><a href="/" target="_blank">{:sysconfig('site','site_name')}</a>
+                </a>
+            </div>
+            <div class="copyright">
+                Copyright &copy; 2023 <a href="/" target="_blank">{:sysconfig('site','site_name')}</a> - <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow noreferrer">{:sysconfig('site','site_beian')}</a>
+            </div>
+        </div>
+        <div class="part-footer-fixed">
+            <div class="fixed-right">
+                <div is="uisdc-live"></div>
+                <div class="gotop">
+                    <a href="#" class="go_top item"> <i class="icon-top2"></i> </a>
+                    <div class="part-navigations">
+                        <div class="titles-wrap">
+                            <h2 class="pt">网址导航</h2>
+                            <div class="titles flex f-3">
+
+                                <?php foreach ($mallt_cateData as $mallt_cate): ?>
+
+
+
+
+
+
+                                <div class="f-item"><a href="<?php echo $mallt_cate['url']; ?>" class="f-box ptitle">呼叫呼叫<i class="ico"><i class="<?php echo $mallt_cate['remark']; ?>"></i></i><strong><?php echo $mallt_cate['title']; ?></strong></a></div>
+
+                                <?php endforeach; ?>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://hao.tukuv.com/static/tucool/js/jquery.js" charset="utf-8"></script>
+    <script src="https://hao.tukuv.com/static/tucool/js/vue.js" charset="utf-8"></script>
+    <script src="https://hao.tukuv.com/static/tucool/js/touchEvent.js" charset="utf-8"></script>
+    <script src="https://hao.tukuv.com/static/tucool/js/web.js?v=0.2.13" charset="utf-8"></script>
+    <script src="https://hao.tukuv.com/static/tucool/js/jweixin-1.6.0.js" charset="utf-8"></script>
+
+</body>
+
+</html>

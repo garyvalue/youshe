@@ -1,0 +1,19 @@
+<div class="property-input-container" ref="propertyInput">
+    <input type="hidden" :name="setting.name" :value="value" :lay-verify="setting.required == 1?'required':''">
+    <div class="input-list">
+        <div class="input-item" v-for="(item,index) in listItem">
+            <div class="input-name"><input type="text" class="layui-input" placeholder="请输入名称" :value="item.name" @change="onItemNameChange(item,index,$event)"></div>
+            <div class="input-value"><input type="text" class="layui-input" placeholder="请输入数据" :value="item.value" @change="onItemValueChange(item,index,$event)"></div>
+            <div class="input-option">
+                <div class="layui-btn-group">
+                    <div class="layui-btn layui-btn-primary" @click="onItemMoveUp(item,index)"><i class="fa fa-arrow-up"></i></div>
+                    <div class="layui-btn layui-btn-primary" @click="onItemMoveDown(item,index)"><i class="fa fa-arrow-down"></i></div>
+                    <div class="layui-btn layui-btn-primary" @click="onItemDelete(item,index)"><i class="fa fa-close"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="input-item">
+            <div class="layui-btn layui-btn-primary" @click="onAddItem"><i class="layui-icon layui-icon-add-1"></i></div>
+        </div>
+    </div>
+</div>

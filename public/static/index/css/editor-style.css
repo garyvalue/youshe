@@ -1,0 +1,242 @@
+/*
+Theme Name: WebStacks PRO
+Description: Used to style the TinyMCE editor.
+*/
+
+html .content.mceContentBody {
+	font: 16px "Microsoft YaHei", 微软雅黑, Helvetica;
+	color: #555;
+	line-height: 1.9;
+	margin: 10px auto;
+	padding: 14px 10px 5px 10px !important;
+	max-width: 750px;
+	min-height: 350px;
+	border: 1px dashed #ddd;
+	position: relative;
+}
+
+html .footer_inf_t.mceContentBody,
+html .footer_inf_b.mceContentBody {
+	font: 16px "Microsoft YaHei", 微软雅黑, Helvetica;
+	color: #555;
+	line-height: 1.8;
+}
+
+html .content.mceContentBody:before {
+	content: '正文';
+	font-size: 13px;
+	color: #ddd;
+	position: absolute;
+	left: 10px;
+	top: -12px;
+	display: block;
+	background: #fff;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;}
+dl {
+	margin-bottom: 1.6em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin-bottom: 1.6em;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+	border-width: 1px 0 0 1px;
+	margin: 0 0 10px;
+}
+table, th, td {
+	border: 1px solid #eaeaea!important;
+}
+
+
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+
+th {
+	border-width: 0 1px 1px 0;
+	font-weight: 700;
+}
+
+td {
+	border-width: 0 1px 1px 0;
+}
+
+th, td {
+	padding: 10px;
+}
+
+hr {
+	height: 1px;
+	margin: 10px 0;
+	border: none;
+	border-top: 1px solid #ddd;
+}
+blockquote{position:relative;padding:.9375rem 0 .9375rem 1.75rem;margin:1.5rem 0;border-left: 5px solid rgba(136,136,136,.2);background-color: rgba(136,136,136,.1);}
+blockquote p:last-of-type{margin:0;padding:0}
+
+pre {
+    position:relative;
+    overflow-y: auto;
+    border: 0;
+    color: #777;
+    border-radius: 3px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    line-height: 1.2;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: rgba(0,0,0,.04);
+}
+a img {
+	border: 0;
+}
+
+a {
+	color: #555;
+}
+
+p{
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    line-height: 2;
+    word-wrap: break-word;
+}  
+h1,h2,h3,h4,h5,h6 {
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    border-left: 5px solid #f1404b;
+    padding: .25rem 0 .25rem 10px;
+    margin-left: -15px;
+}
+
+h3 { 
+    font-size: 1.125rem; 
+    border-left: 5px solid #f1404b;   
+	margin-left: -15px;
+	padding: 0 0 0 10px; 
+}
+
+
+h4 {
+    font-size: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid rgba(136,136,136,.2);
+}
+
+h5,
+h6 {
+    font-size: 1rem;
+}
+ 
+
+ul,
+ol { 
+    font-size: .875rem;
+}
+table {
+    width: 100%;
+}
+
+fieldset {
+	width: 94%;
+	padding: 5px 15px;
+	margin: 0 0 10px 0;
+	border: 1px solid #ddd;
+}
+
+legend {
+	font-weight: bold;
+	padding: 5px;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+.wp-caption {
+	background: #f3f3f3;
+	border: 1px solid #ebebeb;
+	padding: 5px;
+	border-radius: 3px;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0;
+}
+
+.wp-caption-dt {
+	line-height: 0 !important;
+	margin: 0 0 5px 0;
+}
+
+.wp-caption-dd {
+	font-size: 14px;
+	text-align: center !important;
+}
+
+blockquote.wp-embedded-content {
+	display: none;
+}
+
+.wp-embedded-content {
+	width: 100%;
+}
+
+/** 图文混排 **/
+img.centered {
+	display: block;
+	margin: 0 auto 10px;
+}
+
+img.alignnone {
+	margin: 0 0 10px 0;
+	display: block;
+}
+
+img.alignright {
+	margin: 0 0 10px 10px;
+	display: inline;
+}
+
+img.alignleft {
+	margin: 0 10px 10px 0;
+	display: inline;
+}
+
+.aligncenter {
+	display: block;
+	margin: 0 auto 10px;
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 10px 10px;
+}
+
+.alignleft {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+ 

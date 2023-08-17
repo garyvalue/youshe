@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>提交链接</title>
+    <link rel="stylesheet" type="text/css" href="https://ai.goolibao.com/open/layui/css/layui.css">
+    <style>
+        .layui-btn-primary {
+            background-color: #1E9FFF;
+            color: #fff;
+        }
+        
+        .fullscreen-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: {:sysconfig('site', 'site_yanse')};
+            z-index: 9999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        
+        .fullscreen-nav .logo {
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .fullscreen-nav .logo img {
+            width: 160px;
+            height: 32px;
+            margin-right: 10px;
+        }
+        
+        .fullscreen-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        .fullscreen-nav ul li {
+            margin-right: 10px;
+        }
+        
+        .fullscreen-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .fullscreen-nav ul li a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fullscreen-nav">
+        <a class="logo" href="/">
+            <img src="{:sysconfig('site','logo_image')}" alt="提交链接">
+        </a>
+        <ul>
+
+
+
+            <?php foreach ($mallt_cateData as $mallt_cate): ?>
+            <li>
+                <a href="<?php echo $mallt_cate['url']; ?>">
+                    <?php echo $mallt_cate['title']; ?>
+                </a>
+            </li>
+
+            <?php endforeach; ?>
+
+
+
+
+        </ul>
+    </div>
+   
+
+
+
+    <div class="layui-container" style="padding-top: 10%;">
+        <div class="layui-row">
+            <div class="layui-col-md6 layui-col-md-offset3">
+                <form class="layui-form" id="myForm">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">网站名称</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="name" required lay-verify="required" placeholder="请输入网站名称" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">网站URL</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="url" required lay-verify="required|url" placeholder="请输入网站URL" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">网站介绍</label>
+                        <div class="layui-input-block">
+                            <textarea name="description" required lay-verify="required" placeholder="请输入网站介绍" class="layui-textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">联系微信号</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="wechat" required lay-verify="required" placeholder="请输入联系微信号" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn layui-btn-primary" lay-submit lay-filter="formDemo">提交留言</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://ai.goolibao.com/open/layui/layui.js"></script>
+    <script>
+        layui.use('form', function() {
+            var form = layui.form;
+            var $ = layui.$;
+
+            // 监听提交按钮的点击事件
+            form.on('submit(formDemo)', function(data) {
+                // 提交表单数据
+                $.ajax({
+                    url: "/message/submit", // 提交的接口地址
+                    type: "POST",
+                    data: $("#myForm").serialize(), // 序列化表单数据
+                    success: function(response) {
+                        // 提交成功后的回调函数
+                        layer.msg('提交成功', {
+                            time: 3000 // 3秒后自动关闭弹窗
+                        }, function() {
+                            window.location.href = "/"; // 跳转到首页
+                        });
+                    },
+                    error: function() {
+                        // 提交失败后的回调函数
+                        layer.msg('提交失败');
+                    }
+                });
+
+                return false; // 阻止表单提交
+            });
+        });
+    </script>
+</body>
+
+</html>

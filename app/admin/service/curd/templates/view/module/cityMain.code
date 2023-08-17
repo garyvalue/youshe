@@ -1,0 +1,1 @@
+<input class="layui-input" name="{{field}}" data-toggle="city-picker" {{required}} value="{{value}}" type="text" data-level="{{level}}" readonly {{submit_field_content}}>

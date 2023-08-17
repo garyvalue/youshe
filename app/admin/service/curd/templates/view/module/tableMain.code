@@ -1,0 +1,3 @@
+                <div data-toggle="table-data" data-index="{:__url('{{controller_url}}/index')}" data-select-type="{{type}}" data-select-value="{{value}}" data-value-field="{{valueField}}" data-name="{{field}}" data-field-name="{{fieldName}}" data-required="{{required}}">
+
+                </div>

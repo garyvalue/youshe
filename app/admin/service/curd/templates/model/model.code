@@ -1,0 +1,21 @@
+<?php
+
+namespace {{modelNamespace}};
+
+use app\common\model\TimeModel;
+
+/**
+{{doc_content}}
+ */
+class {{modelName}} extends TimeModel
+{
+
+    protected $name = "{{table}}";
+
+    protected $deleteTime = {{deleteTime}};
+
+    {{selectList}}
+    
+    {{relationList}}
+
+}

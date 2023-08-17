@@ -1,0 +1,8 @@
+.property-input-container .input-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.property-input-container .input-item .input-value {
+  min-width: 240px;
+}

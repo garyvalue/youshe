@@ -1,0 +1,13 @@
+<div class="tag-input-container" ref="tagInput">
+    <input type="hidden" :name="setting.name" :value="value" :lay-verify="setting.required == 1?'required':''">
+    <div class="layui-input" @click="onContainerClick">
+        <div class="layui-btn layui-btn-xs layui-btn-normal" v-for="(itemTag,indexTag) in listTag">
+            <span>{{itemTag}}</span>
+            <i class="layui-icon layui-icon-close" @click.stop="removeItem(itemTag,indexTag)"></i>
+        </div>
+        <input type="text" class="main-input" ref="tagInputMain" @keydown="onInputChange" @keydown.enter="onInputConfirm" v-model="inputValue" placeholder="输入标签" :style="{width:inputWidth+'px'}">
+    </div>
+    <div class="input-preshow" ref="preshow">
+        {{inputValuePreview}}
+    </div>
+</div>

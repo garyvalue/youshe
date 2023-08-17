@@ -1,0 +1,13 @@
+<div class="layuimini-container">
+    <div class="layuimini-main">
+        <table id="currentTable" class="layui-table layui-hide"
+               data-auth-index="{:auth('{{controllerUrl}}/index')}"
+               data-auth-add="{:auth('{{controllerUrl}}/add')}"
+               data-auth-edit="{:auth('{{controllerUrl}}/edit')}"
+               data-auth-delete="{:auth('{{controllerUrl}}/delete')}"
+               data-auth-export="{:auth('{{controllerUrl}}/export')}"
+               data-auth-modify="{:auth('{{controllerUrl}}/modify')}"
+               lay-filter="currentTable">
+        </table>
+    </div>
+</div>

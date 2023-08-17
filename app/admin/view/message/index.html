@@ -1,0 +1,193 @@
+<div id="main" style="padding-top: 20px;">
+
+
+
+    <main class="main-content">
+
+        <div class="container">
+
+            <!-- end::page-header -->
+
+
+
+
+
+
+
+
+            <body>
+
+                <div class="layui-fluid">
+                    <div class="layui-row layui-col-space15">
+                        <div class="layui-col-md12">
+                            <div class="layui-card">
+                                <div class="layui-card-body ">
+
+
+                                    <div class="layui-card-body layui-table-body layui-table-main">
+                                        <table class="layui-table layui-form">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <input type="checkbox" lay-filter="checkall" name="" lay-skin="primary">
+                                                    </th>
+                                                    <th>ID</th>
+                                                    <th>网站名称</th>
+                                                    <th>网站url</th>
+                                                    <th>网站介绍</th>
+                                                    <th>联系微信号</th>
+                                                    <th>提交时间</th>
+                                                    <th> 操作</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                {volist name="messageData" id="vo"}
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="id" value="1" lay-skin="primary">
+                                                    </td>
+                                                    <td>{$vo.id}</td>
+                                                    <td>{$vo.name}</td>
+                                                    <td>{$vo.url}</td>
+                                                    <td>{$vo.description}</td>
+                                                    <td>{$vo.wechat}</td>
+                                                    <td>{$vo.submit_time}</td>
+
+
+                                                    <td class="td-manage">
+
+
+
+                                                        <a title="删除" href="javascript:;" onclick="message_del(this,'{$vo.id}')" style="text-decoration:none">
+
+                                                            <i class="layui-icon">&#xe640;</i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+
+                                                {/volist}
+
+                                                <!--     <td class="td-manage">
+                                                <a style="text-decoration:none" class="ml-5" href="{:url('message/edit',array('id'=>$vo.id))}" title="修改" <a class="Hui-iconfont" &#xe6df;</i>
+                                                    <a>
+                                                        <a style="text-decoration: none;" class="ml-5" onClick="o2o_del('{:url('base/del',['id'=>$vo.id,'m'=>'message'])}')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;<i></a>
+                                            </td>
+
+
+-->
+
+
+
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="layui-card-body ">
+                                        <div class="page">
+                                            <div>
+                                                <a class="prev" href="">&lt;&lt;</a>
+                                                <a class="num" href="">1</a>
+                                                <span class="current">2</span>
+                                                <a class="num" href="">3</a>
+                                                <a class="num" href="">489</a>
+                                                <a class="next" href="">&gt;&gt;</a></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </body>
+
+
+
+
+
+
+            <!--
+            {volist name="messageData" id="vo"}
+            <tr class="text-c">
+                <ta>{$vo.id}</ta>
+                <ta>{$vo.name}</ta>
+                <ta>{$vo.url}</ta>
+
+                <td class="td-manage">
+                    <a style="text-decoration:none" class="ml-5" href="{:url('message/edit',array('id'=>$vo.id))}" title="修改" <a class="Hui-iconfont" &#xe6df;</i>
+                        <a>
+                            <a style="text-decoration: none;" class="ml-5" onClick="o2o_del('{:url('base/del',['id'=>$vo.id,'m'=>'message'])}')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;<i></a>
+                </td>
+
+            </tr>
+            {/volist}
+
+        -->
+
+
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+
+            <script src="https://ssl.goolibao.com/static/admin/assets/js/lib/layui/layui.js" charset="utf-8"></script>
+            <script type="text/javascript" src="https://ssl.goolibao.com/static/admin/assets/js/index.js"></script>
+
+            <script>
+                layui.use(['laydate', 'form'], function() {
+                    var laydate = layui.laydate;
+                    var form = layui.form;
+
+                    // 监听全选
+                    form.on('checkbox(checkall)', function(data) {
+                        if (data.elem.checked) {
+                            $('tbody input').prop('checked', true);
+                        } else {
+                            $('tbody input').prop('checked', false);
+                        }
+                        form.render('checkbox');
+                    });
+
+                    //执行一个laydate实例
+                    laydate.render({
+                        elem: '#start' //指定元素
+                    });
+
+                    //执行一个laydate实例
+                    laydate.render({
+                        elem: '#end' //指定元素
+                    });
+                });
+
+                function message_del(obj, id) {
+                    layui.layer.confirm('确认要删除吗？', {
+                        icon: 3,
+                        title: '提示信息'
+                    }, function(index) {
+                        //发异步删除数据
+                        layui.jquery.ajax({
+                            url: "/admin/message/del",
+                            type: "post",
+                            data: {
+                                id: id
+                            },
+                            success: function(res) {
+                                if (res.status == 6) {
+                                    layui.jquery(obj).parents("tr").remove();
+                                    layui.layer.msg('已删除!', {
+                                        icon: 1,
+                                        time: 1000
+                                    });
+                                } else {
+                                    layui.layer.msg(res.info, {
+                                        icon: 2,
+                                        time: 1000
+                                    });
+                                }
+                            }
+                        });
+                    });
+                }
+            </script>
+
+            </html>

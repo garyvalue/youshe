@@ -1,0 +1,31 @@
+
+    /**
+     * @NodeAnotation(title="导出")
+     */
+    public function export()
+    {
+        list($page, $limit, $where) = $this->buildTableParames();
+
+
+        $this->model = $this->model{{relationIndexMethod}};
+
+        $fields = $this->request->param('fields', '{}', null);
+        $image_fields = $this->request->param('image_fields', '{}', null);
+        $select_fields = $this->request->param('select_fields', '{}', null);
+        $date_fields = $this->request->param('date_fields', '{}', null);
+
+        $fields = json_decode($fields, true);
+        $image_fields = json_decode($image_fields, true);
+        $select_fields = json_decode($select_fields, true);
+        $date_fields = json_decode($date_fields, true);
+
+        $content = \app\common\tools\ExportTools::excel($this->model, $where, $fields, $image_fields, $select_fields, $date_fields);
+
+        $export_file_name = $this->exportFileName;
+
+        if (empty($export_file_name)) {
+            $export_file_name = $this->model->getName();
+        }
+
+        return download($content, $export_file_name . date('YmdHis') . '.xlsx', true);
+    }

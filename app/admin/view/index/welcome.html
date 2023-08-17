@@ -1,0 +1,215 @@
+<link rel="stylesheet" href="__STATIC__/admin/css/welcome.css?v={:time()}" media="all">
+<div class="layuimini-container">
+    <div class="layuimini-main">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md8">
+                <div class="layui-row layui-col-space15">
+                    <div class="layui-col-md6">
+                        <div class="layui-card">
+                            <div class="layui-card-header"><i class="fa fa-warning icon"></i>数据统计</div>
+                            <div class="layui-card-body">
+                                <div class="welcome-module">
+                                    <div class="layui-row layui-col-space10">
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-blue">实时</span>
+                                                        <h5>用户统计</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins">1234</h1>
+                                                        <small>当前分类总记录数</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-cyan">实时</span>
+                                                        <h5>商品统计</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins">1234</h1>
+                                                        <small>当前分类总记录数</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-orange">实时</span>
+                                                        <h5>浏览统计</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins">1234</h1>
+                                                        <small>当前分类总记录数</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-green">实时</span>
+                                                        <h5>订单统计</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins">1234</h1>
+                                                        <small>当前分类总记录数</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <div class="layui-card">
+                            <div class="layui-card-header"><i class="fa fa-credit-card icon icon-blue"></i>快捷入口</div>
+                            <div class="layui-card-body">
+                                <div class="welcome-module">
+                                    <div class="layui-row layui-col-space10 layuimini-qiuck">
+
+                                        {foreach $quicks as $vo}
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a layuimini-content-href="{:url($vo['href'])}" data-title="{$vo['title']}">
+                                                <i class="{$vo['icon']|raw}"></i>
+                                                <cite>{$vo['title']}</cite>
+                                            </a>
+                                        </div>
+                                        {/foreach}
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="layui-col-md12">
+                        <div class="layui-card">
+                            <div class="layui-card-header"><i class="fa fa-line-chart icon"></i>报表统计</div>
+                            <div class="layui-card-body">
+                                <div id="echarts-records" style="width: 100%;min-height:500px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-col-md4">
+
+
+
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="fa fa-fire icon"></i>版本信息</div>
+                    <div class="layui-card-body layui-text">
+                        <table class="layui-table">
+                            <colgroup>
+                                <col width="100">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td>框架名称</td>
+                                    <td data-toggle="copy-text" data-clipboard-text="ulthon_admin">
+                                        ulthon_admin 框架作者http://admin.demo.ulthon.com/<i class="fa fa-copy"></i>
+                                    </td>
+                                </tr>
+
+
+
+
+
+
+
+                                <td>产品名称</td>
+                                <td data-toggle="copy-text" data-clipboard-text="ulthon_admin">
+                                    AI网址导航，开发者QQ1032904660<i class="fa fa-copy"></i>
+                                </td>
+                                </tr>
+
+
+                                <td>AI网址导航作者</td>
+                                <td data-toggle="copy-text" data-clipboard-text="ulthon_admin">
+                                    QQ1032904660 官方网址:https://ssl.goolibao.com<i class="fa fa-copy"></i>
+                                </td>
+                                </tr>
+
+                                <td>程序持续更新请关注下面网站动态</td>
+                                <td data-toggle="copy-text" data-clipboard-text="ulthon_admin">
+                                    QQ1032904660 官方网址:https://ssl.goolibao.com 更新地址：y.goolibao.com<i class="fa fa-copy"></i>
+                                </td>
+                                </tr>
+
+
+
+                                <td>源码发布</td>
+                                <td data-toggle="copy-text" data-clipboard-text="ulthon_admin">
+                                    https://y.goolibao.com<i class="fa fa-copy"></i>
+                                </td>
+                                </tr>
+
+                                <td>源码下载</td>
+                                <td data-toggle="copy-text" data-clipboard-text="ulthon_admin">
+                                    https://y.goolibao.com/post-162.html<i class="fa fa-copy"></i>
+                                </td>
+                                </tr>
+
+
+
+
+
+
+
+                                <tr>
+                                    <td>当前版本</td>
+                                    <td data-toggle="copy-text" data-clipboard-text="{:\\app\\common\\command\\admin\\Version::VERSION}">{:\\app\\common\\command\\admin\\Version::VERSION} <i class="fa fa-copy"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>最新修改</td>
+                                    <td>{:implode('<br />',\\app\\common\\command\\admin\\Version::COMMENT)}</td>
+                                </tr>
+                                <tr>
+                                    <td>主要特色</td>
+                                    <td>零门槛 / 响应式 / 清爽 / 极简</td>
+                                </tr>
+
+
+
+
+                                <tr>
+
+                                    <td>作者官方</td>
+                                    <td>{:\\app\\common\\command\\admin\\Version::LAYUI_VERSION}</td>
+                                </tr>
+
+                                <tr>
+
+                                    <td>作者QQ</td>
+                                    <td>{:\\app\\common\\command\\admin\\Version::QQ}</td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>ThinkPHP</td>
+                                    <td>{:\\think\\App::VERSION}</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

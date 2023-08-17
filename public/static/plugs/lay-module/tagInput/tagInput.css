@@ -1,0 +1,24 @@
+.tag-input-container .layui-input {
+  height: auto;
+  min-height: 30px;
+  padding-bottom: 8px;
+}
+.tag-input-container .main-input {
+  border: none;
+  height: 22px;
+  line-height: 22px;
+  margin-left: 5px;
+  margin-top: 8px;
+  vertical-align: bottom;
+}
+.tag-input-container .input-preshow {
+  display: inline-block;
+  height: 0px;
+  overflow: hidden;
+}
+.tag-input-container .layui-form-danger + .layui-input {
+  border-color: #ff5722 !important;
+}
+.tag-input-container .layui-btn {
+  margin-top: 8px;
+}

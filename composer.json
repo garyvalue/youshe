@@ -1,0 +1,59 @@
+{
+    "name": "ulthon/ulthon_admin",
+    "description": "基于ThinkPHP6.0和layui的快速开发的后台管理系统。",
+    "type": "project",
+    "keywords": [
+        "ulthon_admin",
+        "ulthon",
+        "thinkphp",
+        "admin"
+    ],
+    "homepage": "http://admin.demo.ulthon.com//",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "augushong",
+            "email": "augushong@ulthon.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "topthink/framework": "^6.0.0",
+        "topthink/think-orm": "^2.0",
+        "topthink/think-multi-app": "^1.0",
+        "topthink/think-view": "^1.0",
+        "topthink/think-captcha": "^3.0",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.4",
+        "phpoffice/phpspreadsheet": "^1.22",
+        "topthink/think-migration": "^3.0",
+        "doctrine/annotations": "^1.13",
+        "topthink/think-filesystem": "^2.0",
+        "overtrue/flysystem-qiniu": "^2.0",
+        "overtrue/flysystem-cos": "^4.0",
+        "iidestiny/flysystem-oss": "^3.0",
+        "phpoffice/phpword": "^1.1"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app"
+        },
+        "psr-0": {
+            "": "extend/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "secure-http": false
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php think service:discover",
+            "@php think vendor:publish"
+        ]
+    }
+    
+}
